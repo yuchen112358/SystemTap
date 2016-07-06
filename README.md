@@ -1,4 +1,6 @@
-该项目来源于https://github.com/flipreverse/systemtap-android-app，此处仅是做了一些BUG修复。
+该项目来源于https://github.com/flipreverse/systemtap-android-app
+
+此处仅是做了一些BUG修复。
 A graphical frontend to control SystemTap for Android
 =====================================================
 
