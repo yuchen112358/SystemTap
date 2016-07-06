@@ -1,0 +1,36 @@
+package SystemTapMessage;
+
+option java_package = "com.systemtap.android.net";
+
+enum MessageType {
+	ACK				=	1;
+	SEND_MODULE		=	2;
+	LIST_MODULES	=	3;
+	MODULE_LIST		=	4;
+	CONTROL_MODULE	=	5;
+}
+
+message SendModule {
+	required string			name	=	1;
+	required bytes			data	=	2;
+}
+
+message ModuleInfo {
+	required string			name	=	1;
+	required ModuleStatus	status	=	2;
+}
+
+message ModuleList {
+	repeated ModuleInfo		modules	=	1;
+}	
+
+message Ack {
+	required int32	ackedType	=	1;
+}
+
+enum ModuleStatus {
+	RUNNING		=	0;
+	STOPPED		=	1;
+	CRASHED		=	2;
+	DELETED		=	3;
+}
